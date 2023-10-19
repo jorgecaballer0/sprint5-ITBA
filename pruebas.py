@@ -28,6 +28,8 @@
 #Posibilidad de tener hasta dos chequeras.
 #No se aplican comisiones a las transferencias.
 
+
+### FUNCIONES
 # Compra de dolares con impuestos
 def calcular_monto_total(precio_dolar, cantidad, impuesto_pais, ganancias):
     total_sin_impuestos = precio_dolar * cantidad
@@ -45,3 +47,10 @@ def descontar_comision(monto, comision):
 def calcular_monto_plazo_fijo(monto, tasa_interes):
     monto_final = monto * (1 + tasa_interes / 100)
     return monto_final
+
+# Ejemplo 1
+print(f"Total: {int(calcular_monto_total(1000,100,35,10))}")
+# Ejemplo 2
+print(f"Sin comision: {int(descontar_comision(1000,5))}")
+# Ejemplo 3 
+print(f"Total plazo fijo: {int(calcular_monto_plazo_fijo(100000,10))}")
