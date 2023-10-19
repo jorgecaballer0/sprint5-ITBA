@@ -39,8 +39,8 @@ def calcular_monto_total(precio_dolar, cantidad, impuesto_pais, ganancias):
 
 # Comision
 def descontar_comision(monto, comision):
-    comision_amount = (monto * comision) / 100
-    monto_descontado = monto - comision_amount
+    monto_comision = (monto * comision) / 100
+    monto_descontado = monto - monto_comision
     return monto_descontado
 
 # Plazo fijo
